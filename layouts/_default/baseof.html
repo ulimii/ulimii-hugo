@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xml:lang="en-GB" lang="en-GB">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class='is-preload'>
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    {{ partial "footer-end.html" . }}
+</body>
+
+</html>

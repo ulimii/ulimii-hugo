@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+{{ with .Keywords }}
+<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }} {{ end }}{{ $e }}{{ end }}">{{ end }}
+<meta name="description" content="{{ if .Page.Description }}{{ .Description }}{{ else if .Page.Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<title>{{ if .Page.Title }}{{ .Page.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ if isset .Site.Params "favicon" }}
+<link href="{{ .Site.Params.favicon | absURL }}" rel="shortcut icon" type="image/x-icon" />{{ end }}
+<!-- CSS-->
+<link rel="stylesheet" href="{{ "/css/main.css" | absURL }}">

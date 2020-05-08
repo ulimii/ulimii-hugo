@@ -1,0 +1,12 @@
+<!-- Header -->
+<header id="header" class="alt">
+    <a class="logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</span></a>
+    <nav id="nav">
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li class="{{ if $currentPage.IsMenuCurrent "main" . }} current{{ end }}"><a href="{{.URL}}">{{ .Name }}</a></li>
+            {{end}}
+        </ul>
+    </nav>
+</header>

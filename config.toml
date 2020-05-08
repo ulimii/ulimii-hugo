@@ -1,0 +1,35 @@
+baseURL = "/"
+languageCode = "en-gb"
+title = "Ulimii"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+favicon = "/images/favicon.ico"
+description = "description goes here"
+keywords = "keywords goes here"
+
+copyright = "© Untitled. All rights reserved. Ulimii LTD."
+
+[menu]
+  # Main Menu
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+      name = "School"
+      url = "/school/"
+      weight = 2
+
+  [[menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 3
